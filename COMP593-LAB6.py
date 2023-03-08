@@ -5,7 +5,6 @@ import os
 
 FILE_URL = "https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe"
 HASH_URL = "http://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe.sha256"
-installer_path = 'C:\\temp\\vlc-3.0.18-win64.exe'
 
 def main():
 
@@ -83,12 +82,14 @@ def save_installer(installer_data):
 
 def run_installer(installer_path):
 
+    installer_path = 'C:\\temp\\vlc-3.0.18-win64.exe'
     subprocess.run([installer_path, '/L=1033', '/S'])
 
     return
     
 def delete_installer(installer_path):
 
+    installer_path = 'C:\\temp\\vlc-3.0.18-win64.exe'
     os.remove(installer_path)
 
     return
